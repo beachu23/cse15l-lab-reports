@@ -29,7 +29,10 @@ Afterwards, you can play around with some commands:
 ![Image](Screenshot%202023-04-06%20114000.png)
 cd, ls, cat, and cp are some examples.
 
-I tried to cd into the only directory provided but it didn't work? So I'm not completely sure on how it works. 
+![Image](https://user-images.githubusercontent.com/130091977/233564525-8995c207-2745-4ea0-99ab-8ecc6a57ce86.png)
+
+This is an example of cat, where I try printing out NumberServer.java
+
 
 Congratulations! That's all for the tutorial.
 
