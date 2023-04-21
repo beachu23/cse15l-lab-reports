@@ -29,9 +29,19 @@ Afterwards, you can play around with some commands:
 ![Image](Screenshot%202023-04-06%20114000.png)
 cd, ls, cat, and cp are some examples.
 
+![Image](https://user-images.githubusercontent.com/130091977/233565152-a5c06ee2-f86f-4f09-ab36-69fa009fd17a.png)
+
+This is me cding into Wavelet
+
+
 ![Image](https://user-images.githubusercontent.com/130091977/233564525-8995c207-2745-4ea0-99ab-8ecc6a57ce86.png)
 
 This is an example of cat, where I try printing out NumberServer.java
+
+![Image](https://user-images.githubusercontent.com/130091977/233565612-1f8a7f2d-2746-4334-8da1-eb583eb8e02d.png)
+
+This is me using cp to copy the file.
+
 
 
 Congratulations! That's all for the tutorial.
