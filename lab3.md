@@ -32,12 +32,12 @@ The symptom of running the tests(and the actual tests):
 
 Code Pre-fix
 
- ```static void reverseInPlace(int[] arr) {
-    for(int i = 0; i < arr.length; i += 1) {
-      arr[i] = arr[arr.length - i - 1];
-    }
-  }
- ```
+```static void reverseInPlace(int[] arr) {
+   for(int i = 0; i < arr.length; i += 1) {
+     arr[i] = arr[arr.length - i - 1];
+   }
+ }
+```
 
 Code Post-fix:
 
@@ -51,5 +51,7 @@ Code Post-fix:
     }
   }```
   
+  Things I learned:
+  I learned how to use the wildcard symbol, * in lab2, from one of my classmates, which has been very helpful to me in running a large number of files. I also learned that AssertEquals does not work for doubles in lab3. I learned to round them and convert them into strings instead.
 
 
