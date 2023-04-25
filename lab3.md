@@ -30,7 +30,15 @@ The symptom of running the tests(and the actual tests):
 
 ![image](https://user-images.githubusercontent.com/130091977/234192946-7d4e5ac8-d498-4d3b-8bf6-a63fa6e83afd.png)
 
-Code Pre-fix:
+Code Pre-fix
+
+ ```static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = arr[arr.length - i - 1];
+    }
+  }```
+
+Code Post-fix:
 
   ```static void reverseInPlace(int[] arr) {
     int[] copy = new int[arr.length];
