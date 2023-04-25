@@ -31,8 +31,8 @@ The symptom of running the tests(and the actual tests):
 ![image](https://user-images.githubusercontent.com/130091977/234192946-7d4e5ac8-d498-4d3b-8bf6-a63fa6e83afd.png)
 
 Code Pre-fix:
-`
-  static void reverseInPlace(int[] arr) {
+
+  `static void reverseInPlace(int[] arr) {
     int[] copy = new int[arr.length];
     for(int i = 0; i < arr.length; i++) {
       copy[i] = arr[i];
@@ -40,8 +40,7 @@ Code Pre-fix:
     for(int i = 0; i < arr.length; i++){
       arr[i] = copy[arr.length - 1 - i];
     }
-  }
+  }`
   
- `
 
 
