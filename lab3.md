@@ -20,9 +20,26 @@ I'll be using reverseInPlace as the method to focus Part 2 of my lab report on.
 
 Failure-inducing input: 
 
-    {3}
+    {3,4}
 
+Input that does not induce a failure:
+
+    {3}
+    
+The symptom of running the tests(and the actual tests):
 
 ![image](https://user-images.githubusercontent.com/130091977/234192946-7d4e5ac8-d498-4d3b-8bf6-a63fa6e83afd.png)
+
+Code Pre-fix:
+`
+    int[] copy = new int[arr.length];
+    for(int i = 0; i < arr.length; i++) {
+      copy[i] = arr[i];
+    }
+    for(int i = 0; i < arr.length; i++){
+      arr[i] = copy[arr.length - 1 - i];
+    }
+  }
+ `
 
 
