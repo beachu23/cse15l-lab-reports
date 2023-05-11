@@ -16,6 +16,25 @@ Output:
 the hijacking would take the traditional form: that is, it would not be a suicide hijacking designed to convert the aircraft into a guided missile.
 ```
 
+The command allows ```grep``` to search for multiple string patterns in the file. If either pattern shows up in the file, the line will be included in the output. 
+
+Input b:
+
+```
+grep -e "suicide"  911report/chapter-1.txt
+```
+
+Output: 
+
+```
+the hijacking would take the traditional form: that is, it would not be a suicide hijacking designed to convert the aircraft into a guided missile.
+```
+
+If only one string is passed to ```grep```, it will function as if the ```-e``` option does not exist. In other words, it will simply search for the one string presented.
+
+2. ```
+
+
 
 
 
