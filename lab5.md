@@ -16,7 +16,7 @@ Output:
 the hijacking would take the traditional form: that is, it would not be a suicide hijacking designed to convert the aircraft into a guided missile.
 ```
 
-The command allows ```grep``` to search for multiple string patterns in the file. If either pattern shows up in the file, the line will be included in the output. 
+Comments: The command allows ```grep``` to search for multiple string patterns in the file. If either pattern shows up in the file, the line will be included in the output. 
 
 Input b:
 
@@ -30,9 +30,232 @@ Output:
 the hijacking would take the traditional form: that is, it would not be a suicide hijacking designed to convert the aircraft into a guided missile.
 ```
 
-If only one string is passed to ```grep```, it will function as if the ```-e``` option does not exist. In other words, it will simply search for the one string presented.
+Comments: If only one string is passed to ```grep```, it will function as if the ```-e``` option does not exist. In other words, it will simply search for the one string presented.
 
-2. ```
+Sources used: chatGPT
+
+2. ```-c ``` option
+
+Input a:
+
+```
+grep -c "suicide" 911report/chapter-1.txt 911report/chapter-2.txt
+```
+
+Output:
+
+```
+911report/chapter-1.txt:1
+911report/chapter-2.txt:3
+```
+
+Comments: ```-c``` counts the number of lines where the text appears in the file. In the case of multiple files, it'll list the file relative path, as well as the numnber of times it's appeared
+Input b:
+
+```
+grep -c "suicide" 911report/chapter-11.txt
+```
+
+Output: 
+
+```
+10
+```
+
+Comments: As we see, on one file, only the number appears
+
+Sources used: chatGPT
+
+
+3.  ```-B``` option
+
+Input a:
+
+```
+grep -B 1 "terrorist" 911report/chapter-10.txt
+```
+
+Output:
+
+```
+                injured and protect against any further attacks, he said: "We will make no
+                distinction between the terrorists who committed these acts and those who harbor
+--
+                government attorneys to seek denial of bond until such time as they were "cleared"
+                of terrorist connections by the FBI and other agencies; and ordered the identity of
+                the detainees kept secret. INS attorneys charged with prosecuting the immigration
+                violations had trouble getting information about the detainees and any terrorist
+--
+                detainee list, noting that two (including Moussaoui) were linked directly to a
+                terrorist organization and that it had obtained new leads helpful to the
+                investigation of the 9/11 terrorist attacks.
+--
+                chapter 3). Ashcroft told us he was determined to take every conceivable action,
+                within the limits of the Constitution, to identify potential terrorists and deter
+--
+                of enemy. The President tasked principals to go beyond their pre-9/11 work and
+                develop a strategy to eliminate terrorists and punish those who support them. As
+--
+                terrorism as a threat to our way of life," an aim that would include pursuing other
+                international terrorist organizations in the Middle East.
+--
+                to provide the United States with intelligence information;
+                to continue to publicly condemn the terrorist acts;
+--
+                his chief lieutenants, including Ayman al Zawahiri; tell the United States what the
+                Taliban knew about al Qaeda and its operations; close all terrorist camps; free all
+--
+                Ladin and his deputies and shut down al Qaeda camps within 24 to 48 hours, or the
+                United States will use all necessary means to destroy the terrorist infrastructure.
+--
+                9/11 attacks, hold states and other actors responsible for providing sanctuary to
+                terrorists, work with a coalition to eliminate terrorist groups and networks, and
+--
+                Ashcroft, Mueller, Tenet, Deputy Secretary of Defense Paul Wolfowitz, and Cofer
+                Black, chief of the DCI's Counterterrorist Center.
+--
+                ultimatum. The President also tasked Rumsfeld to ensure that robust measures to
+                protect American military forces against terrorist attack were implemented
+--
+
+            NSC staff members had begun leading meetings on terrorist fund-raising by September
+--
+                terrorism, not just on al Qaeda. It also incorporated the President's determination
+                not to distinguish between terrorists and those who harbor them. It included a
+--
+                Afghanistan had already begun-included new material followed by annexes discussing
+                each targeted terrorist group. The old draft directive on al Qaeda became, in
+--
+
+            The United States would strive to eliminate all terrorist networks, dry up their
+--
+                Hanjour's high-speed dive into the Pentagon. He told us he recalled Iraqi support
+                for Palestinian suicide terrorists as well. Speculating about other possible states
+--
+            Secretary Powell recalled that Wolfowitz-not Rumsfeld-argued that Iraq was ultimately
+                the source of the terrorist problem and should therefore be attacked.
+--
+                that had already been conveyed privately." The Taliban must act, and act
+                immediately," he said." They will hand over the terrorists, or they will share in
+--
+                was not with Islam: "The enemy of America is not our many Muslim friends; it is not
+                our many Arab friends. Our enemy is a radical network of terrorists, and every
+--
+                "Every nation, in every region, now has a decision to make: Either you are with us,
+                or you are with the terrorists."
+--
+                begins with al Qaeda, but it does not end there," he said." It will not end until
+                every terrorist group of global reach has been found, stopped, and defeated." The
+```
+
+Comments: ```-B n ``` where n is a number returns the nth line before the line where the string appears. In this example, the line before "terrorist" appears is printed out.
+                
+Input b:
+
+```
+grep -B 0 "terrorist" 911report/chapter-10.txt
+```
+
+Output:
+
+```
+                distinction between the terrorists who committed these acts and those who harbor
+--
+                of terrorist connections by the FBI and other agencies; and ordered the identity of
+--
+                violations had trouble getting information about the detainees and any terrorist
+--
+                terrorist organization and that it had obtained new leads helpful to the
+                investigation of the 9/11 terrorist attacks.
+--
+                within the limits of the Constitution, to identify potential terrorists and deter
+--
+                develop a strategy to eliminate terrorists and punish those who support them. As
+--
+                international terrorist organizations in the Middle East.
+--
+                to continue to publicly condemn the terrorist acts;
+--
+                Taliban knew about al Qaeda and its operations; close all terrorist camps; free all
+--
+                United States will use all necessary means to destroy the terrorist infrastructure.
+--
+                terrorists, work with a coalition to eliminate terrorist groups and networks, and
+--
+                Black, chief of the DCI's Counterterrorist Center.
+--
+                protect American military forces against terrorist attack were implemented
+--
+            NSC staff members had begun leading meetings on terrorist fund-raising by September
+--
+                not to distinguish between terrorists and those who harbor them. It included a
+--
+                each targeted terrorist group. The old draft directive on al Qaeda became, in
+--
+            The United States would strive to eliminate all terrorist networks, dry up their
+--
+                for Palestinian suicide terrorists as well. Speculating about other possible states
+--
+                the source of the terrorist problem and should therefore be attacked.
+--
+                immediately," he said." They will hand over the terrorists, or they will share in
+--
+                our many Arab friends. Our enemy is a radical network of terrorists, and every
+--
+                or you are with the terrorists."
+--
+                every terrorist group of global reach has been found, stopped, and defeated." The
+```
+
+Comments: I was curious to see what would happen if I put ```-B 0```. ```grep``` will simply return the line where the detected string appears.
+
+Sources used: chatGPT
+
+4.  ```$``` modifier
+
+Input a:
+
+```
+grep ";$" 911report/chapter-10.txt
+```
+
+Output:
+
+```
+                    Bin Ladin;
+                    necessary military and intelligence operations;
+                    other personnel to conduct operations against al Qaeda;
+                to provide the United States with intelligence information;
+                to continue to publicly condemn the terrorist acts;
+```
+
+Comments: ```n$``` where n is a string or character, returns all lines that end with n. In this case, I wanted to find all lines that ended with a semicolon in a file.
+
+Input b:
+
+```
+grep "ide.$" 911report/chapter-11-txt 911report/chapter-12.txt 911report/chapter-6.txt
+```
+
+Output: 
+
+```
+911report/chapter-12.txt:                    development of an integrated system, which in turn can become part of the wider
+911report/chapter-12.txt:                    terrorist attacks, the layers of security in place, and the reliability provided
+911report/chapter-6.txt:                Group of principals on the investigative team's findings. The CIA's briefing slides
+911report/chapter-6.txt:            The full Deputies Committee discussed al Qaeda on April 30. CIA briefing slides
+```
+
+Comments: This command also works with multiple files, where the file where the line is found is listed on the left hand side. Additionally, it works with strings as well as single characters.
+
+Sources used: chatGPT
+
+
+
+
+
+
+
 
 
 
