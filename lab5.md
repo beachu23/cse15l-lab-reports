@@ -34,6 +34,19 @@ Comments: If only one string is passed to ```grep```, it will function as if the
 
 Sources used: chatGPT
 
+chatGPT prompt:
+
+> give me an option with grep that can specify multiple patterns to match
+
+
+chatGPT response:
+
+> Certainly! To specify multiple patterns to match with grep, you can use the -e option. Here's an example:
+> ``` 
+> grep -e "pattern1" -e "pattern2" file.txt
+> ```
+
+
 2. ```-c ``` option
 
 Input a:
