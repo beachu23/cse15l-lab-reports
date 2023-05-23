@@ -45,6 +45,14 @@ chatGPT response:
 > ``` 
 > grep -e "pattern1" -e "pattern2" file.txt
 > ```
+> In this example, grep will search for lines that contain either "pattern1" or "pattern2" in the file file.txt. You can specify as many patterns as needed by 
+> using multiple -e options followed by the respective pattern.
+> 
+> For instance, if you want to search for lines that contain either "apple," "banana," or "orange," you can use the following command:
+> ```
+> grep -e "apple" -e "banana" -e "orange" file.txt
+> ```
+> grep will display all lines from file.txt that match any of the specified patterns.
 
 
 2. ```-c ``` option
