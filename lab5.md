@@ -92,11 +92,17 @@ chatGPT prompt:
 
 chatGPT response:
 > Certainly! Here are some more grep options that you can use:
+> 
 > -c: Count the number of matching lines instead of displaying them.
+> 
 > -H: Print the filename along with the matched lines when searching in multiple files.
+> 
 > -r: Recursively search directories and their subdirectories for matching patterns.
+> 
 > -x: Match the entire line, rather than just a substring. Useful for exact matches.
+> 
 > -s: Suppress error messages about nonexistent or unreadable files.
+> 
 > -E: Interpret the pattern as an extended regular expression (ERE). Allows for more advanced pattern matching.
 > 
 > These additional options expand the functionality of grep and provide more flexibility in your text searching and manipulation tasks.
