@@ -266,9 +266,7 @@ chatGPT response:
 > 
 > -C <num>: Print <num> lines of leading and trailing context around a match (equivalent to -A <num> and -B <num> together).
 > 
-> You can replace <num> with the desired number of lines you want to display before or after the match. These options allow you to include additional context 
-> 
-> around the matching lines, providing more information and context for each match.
+> You can replace <num> with the desired number of lines you want to display before or after the match. These options allow you to include additional context around the matching lines, providing more information and context for each match.
 
 
 4.  ```$``` modifier
