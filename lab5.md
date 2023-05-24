@@ -320,7 +320,7 @@ chatGPT response:
 > 
 > By using the > or >> redirection operators, you can save the output of grep to a file. For example, grep "pattern" file.txt > output.txt will save the matching lines to the file "output.txt", overwriting any existing content. Using >> appends the output to an existing file.
 > 
-> These manipulations allow you to extract specific lines based on their position (end of line) or save the matching results to a file for further processing or analysis.
+> These manipulations allow you to extract specific lines based on their position (end of line) or save the matching results to a file for further processing or analysis. 
 
 
     
