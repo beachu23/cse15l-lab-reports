@@ -254,6 +254,17 @@ Comments: I was curious to see what would happen if I put ```-B 0```. ```grep```
 
 Sources used: chatGPT
 
+chatGPT prompt:
+> how would i find lines before and after using grep? list only the options without the codeblocks
+
+chatGPT response:
+> To find lines before and after a matching pattern using grep, you can use the following options:
+
+-A <num>: Print <num> lines of trailing context after a match.
+-B <num>: Print <num> lines of leading context before a match.
+-C <num>: Print <num> lines of leading and trailing context around a match (equivalent to -A <num> and -B <num> together).
+You can replace <num> with the desired number of lines you want to display before or after the match. These options allow you to include additional context around the matching lines, providing more information and context for each match.
+
 4.  ```$``` modifier
 
 Input a:
