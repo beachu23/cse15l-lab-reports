@@ -1,4 +1,4 @@
-# **Edsteam Conversation**
+# **Edstem Conversation**
 ## Original Post
 
 **What environment are you using (computer, operating system, web browser, terminal/editor, and so on)?**
