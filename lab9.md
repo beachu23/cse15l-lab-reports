@@ -44,6 +44,52 @@ I wrote the java code from scratch and it's saved in my home directory in a fold
 
 ![image](https://github.com/beachu23/cse15l-lab-reports/assets/130091977/e600114c-18f2-47ee-b4dd-76d6ba99a81d)
 
+```
+import java.util.Random;
+
+public class RockPaperScissors<T> {
+    private T[] moves;
+
+    public RockPaperScissors(T[] moves) {
+        this.moves = moves;
+    }
+
+    public T getRandomMove() {
+        Random random = new Random();
+        int index = random.nextInt(moves.length);
+        return moves[index];
+    }
+
+    public String play(T playerMove, T computerMove) {
+        if (playerMove.equals(computerMove)) {
+            return "It's a tie!";
+        } else if (
+            ((Comparable) playerMove).compareTo(computerMove) < 0 ||
+            (playerMove.equals(moves[0]) && computerMove.equals(moves[moves.length - 1]))
+        ) {
+            return "Player wins!";
+        } else {
+            return "Computer wins!";
+        }
+    }
+
+    public static void main(String[] args) {
+        String[] moves = {"Rock", "Paper", "Scissors"};
+        RockPaperScissors<String> game = new RockPaperScissors<>(moves);
+
+        String playerMove = game.getRandomMove();
+        String computerMove = game.getRandomMove();
+
+        System.out.println("Player chose: " + playerMove);
+        System.out.println("Computer chose: " + computerMove);
+
+        String result = game.play(playerMove, computerMove);
+        System.out.println("Result: " + result);
+    }
+}
+
+```
+
 
 
 
