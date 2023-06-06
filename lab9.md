@@ -28,6 +28,7 @@ The bash script is in the same folder as the java file and I'm in the correct di
 
 ## TA response
 > hey!
+> 
 > I see a couple of errors in your input–mostly with formatting and syntax. You should read more on where to close the loop when an else statement is present(fi should be after the else statement concludes!) and when providing multiple flags, you do not need a comma to separate them. Let me know if it works!
 
 ## Student response
