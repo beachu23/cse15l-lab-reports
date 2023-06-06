@@ -24,3 +24,14 @@ The commands I typed are:
 ```./rps.sh```
 
 The bash script is in the same folder as the java file and I'm in the correct directory. I compiled the java file and ran it without the bash script once normally, and once using -Xlint: unchecked previously. I have not run any other commands in the terminal.
+
+
+## TA response
+hey!
+
+> I see a couple of errors in your input–mostly with formatting and syntax. You should read more on where to close the loop when an else statement is present(fi should be after the else statement concludes!) and when providing multiple flags, you do not need a comma to separate them. Let me know if it works!
+
+## Student response
+![image](https://github.com/beachu23/cse15l-lab-reports/assets/130091977/ee1456da-3979-455b-b494-3ab291589388)
+
+thank you so much the fixes worked 
