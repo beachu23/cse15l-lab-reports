@@ -20,6 +20,7 @@ My bash script is the following:
 The commands I typed are:
 
 ```chmod +x rps.sh```
+
 ```./rps.sh```
 
 The bash script is in the same folder as the java file and I'm in the correct directory. I compiled the java file and ran it without the bash script once normally, and once using -Xlint: unchecked previously. I have not run any other commands in the terminal.
