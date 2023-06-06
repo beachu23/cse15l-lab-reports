@@ -91,8 +91,28 @@ public class RockPaperScissors<T> {
 }
 
 ```
+I did not change the java file at any point during the process.
 
-and for the bash script:
+This is the original bash script before the changes:
+
+```
+java_file="RockPaperScissors.java"
+
+compiler_flags= "-g" "-Xlint:unchecked"
+
+javac "${compiler_flags[@]}" "$java_file"
+
+if [[ $output =~ "error:" ]]; then
+    echo "Compilation failed. Game cannot be run."
+fi
+else
+    echo "Compilation successful. Running the game..."
+    
+    # Deliberate error: Missing command-line arguments
+    java RockPaperScissors
+```
+
+This is the final bash script:
 
 ```
 java_file="RockPaperScissors.java"
