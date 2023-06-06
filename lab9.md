@@ -130,6 +130,17 @@ else
     java RockPaperScissors
 fi
 ```
+These were the two commands I ran in the terminal to trigger the bug:
+
+```chmod +x rps.sh```
+
+```./rps.sh```
+
+To fix the bug, all you have to do is put the multiple flags in an array instead of in quotes, separately. Additionally, you need to place the fi at the end of the else block, instead of after the if block. 
+
+# Reflection
+
+I think I've become a lot more comfortable using markdown. I'm trying to self-learn HTML right now, and I absolutely hated using markdown for this class for lab reports at first, but I think it's a lot more familiar now, and both experiences help each other. I think bash in general is a super useful skill for me to have, and I'm sure I'll need it when I take DSC30 in the future. 
 
 
 
