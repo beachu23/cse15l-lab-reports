@@ -44,6 +44,8 @@ I wrote the java code from scratch and it's saved in my home directory in a fold
 
 ![image](https://github.com/beachu23/cse15l-lab-reports/assets/130091977/e600114c-18f2-47ee-b4dd-76d6ba99a81d)
 
+My code for my java file is:
+
 ```
 import java.util.Random;
 
@@ -88,6 +90,25 @@ public class RockPaperScissors<T> {
     }
 }
 
+```
+
+and for the bash script:
+
+```
+java_file="RockPaperScissors.java"
+
+compiler_flags=(-g -Xlint:unchecked)
+
+javac "${compiler_flags[@]}" "$java_file"
+
+if [[ $output =~ "error:" ]]; then
+    echo "Compilation failed. Game cannot be run."
+else
+    echo "Compilation successful. Running the game..."
+    
+    # Deliberate error: Missing command-line arguments
+    java RockPaperScissors
+fi
 ```
 
 
